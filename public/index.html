@@ -1,0 +1,45 @@
+<!DOCTYPE html><html lang="en"><head><link rel="stylesheet" href="/umi.css"><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>车辆平台</title><link rel="icon" href="/favicon.png" type="image/x-icon"><script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.data-set-0.9.6/dist/data-set.min.js"></script><script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.14&key=7223df6af333e10343f2aeec7e5f33db&plugin=AMap.Geocoder,AMap.MarkerClusterer,AMap.DistrictSearch,AMap.MapType,AMap.MouseTool,AMap.ToolBar"></script><script>Object.setPrototypeOf =
+  Object.setPrototypeOf || { __proto__: null } instanceof Object
+    ? (function() {
+        function has(obj, k) {
+          return Object.prototype.hasOwnProperty.call(obj, k);
+        }
+        var getPrototypeOf = Object.getPrototypeOf;
+        Object.getPrototypeOf = function gpo(O) {
+          if (O == undefined)
+            throw TypeError("Cannot convert undefined or null to object");
+          O = Object(O);
+          if (has(O, "__proto__")) return O.__proto__;
+          if (getPrototypeOf) return getPrototypeOf(O);
+          if (
+            typeof O.constructor === "function" &&
+            O instanceof O.constructor
+          ) {
+            return O.constructor.prototype;
+          }
+          return O instanceof Object ? Object.prototype : null;
+        };
+
+        return function mixinProperties(obj, proto) {
+          Object.defineProperty(obj, "__proto__", {
+            value: proto,
+            enumerable: false,
+            writable: true,
+            configurable: true
+          });
+          var keys = Object.getOwnPropertyNames(proto);
+          for (var i = 0; i < keys.length; i++) {
+            var key = keys[i];
+            if (!has(obj, key)) {
+              var descriptor = Object.getOwnPropertyDescriptor(proto, key);
+              descriptor.configurable = true;
+              Object.defineProperty(obj, key, descriptor);
+            }
+          }
+          return obj;
+        };
+      })()
+    : function setProtoOf(obj, proto) {
+        obj.__proto__ = proto;
+        return obj;
+      };</script><script>window.routerBase = "/";</script></head><body><noscript>Sorry, we need js to run correctly!</noscript><div id="root"></div><script src="/umi.js"></script></body></html>
